@@ -15,11 +15,12 @@
         android:layout_height="wrap_content"
         android:scaleType="fitCenter"
         android:src="@drawable/sign_in"
-        tools:ignore="MissingConstraints" /> <!-- Make sure this drawable resource exists -->
+        tools:ignore="MissingConstraints" />
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
         app:layout_constraintBottom_toTopOf="@id/getStartedText"   />
+
 
     <TextView
         android:id="@+id/getStartedText"
