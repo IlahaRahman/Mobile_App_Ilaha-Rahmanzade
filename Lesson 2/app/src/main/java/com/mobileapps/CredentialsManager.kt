@@ -1,6 +1,6 @@
 // CredentialsManager.kt
 
-package com.mobileapps.lesson2
+package com.mobileapps
 
 class CredentialsManager {
 

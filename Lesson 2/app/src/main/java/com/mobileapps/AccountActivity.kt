@@ -1,4 +1,4 @@
-package com.mobileapps.lesson2
+package com.mobileapps
 
 import android.os.Bundle
 import android.content.Intent
@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.mobileapps.lesson2.R
 
 class AccountActivity : AppCompatActivity() {
 

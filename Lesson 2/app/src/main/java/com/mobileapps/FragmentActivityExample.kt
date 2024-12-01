@@ -1,8 +1,9 @@
-package com.mobileapps.lesson2
+package com.mobileapps
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.mobileapps.lesson2.R
 import com.mobileapps.lesson2.databinding.ActivityFragmentBinding
 
 class FragmentActivityExample : AppCompatActivity() {
