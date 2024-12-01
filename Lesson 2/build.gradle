@@ -5,3 +5,8 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.7.20' apply false
 }
 
+//dependencies {
+//    val fragment_version = "1.8.5"
+//    // Kotlin
+//    implementation("androidx.fragment:fragment-ktx:$fragment_version")
+//}
