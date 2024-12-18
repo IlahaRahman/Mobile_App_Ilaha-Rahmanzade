@@ -1,13 +1,13 @@
 package com.mobileapps
 
-import android.content.Intent
-import android.widget.Toast
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.mobileapps.lesson2.R
+import androidx.fragment.app.Fragment
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -19,6 +19,10 @@ class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
+
+        if (savedInstanceState == null) {
+            replaceFragment(RegisterFragment())
+        }
 
         emailEditText = findViewById(R.id.emailEditText)
         passwordEditText = findViewById(R.id.passwordEditText)
@@ -33,7 +37,6 @@ class SignUpActivity : AppCompatActivity() {
         val email = emailEditText.text.toString().trim()
         val password = passwordEditText.text.toString().trim()
 
-        // Email validation
         if (email.isEmpty()) {
             showToast("Please enter your email.")
             return
@@ -42,7 +45,6 @@ class SignUpActivity : AppCompatActivity() {
             return
         }
 
-        // Password validation
         if (password.isEmpty()) {
             showToast("Please enter your password.")
             return
@@ -51,7 +53,6 @@ class SignUpActivity : AppCompatActivity() {
             return
         }
 
-        // If all validations pass, navigate to the next activity
         navigateToAccount()
     }
 
@@ -59,9 +60,15 @@ class SignUpActivity : AppCompatActivity() {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, fragment)
+            .commit()
+    }
+
+
     private fun navigateToAccount() {
-        val intent = Intent(this, AccountActivity::class.java)
-        startActivity(intent)
+        replaceFragment(LoginFragment())
     }
 
     private fun showToast(message: String) {
