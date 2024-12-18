@@ -9,6 +9,17 @@
     tools:context="com.mobileapps.SignUpActivity"
     tools:ignore="ExtraText">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/nextButton"
+        app:layout_constraintBottom_toTopOf="@id/loginTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+    />
+
+
     <ImageView
         android:id="@+id/topImage"
         android:layout_width="match_parent"
