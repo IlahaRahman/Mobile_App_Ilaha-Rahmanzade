@@ -1,7 +1,7 @@
-// CredentialsManagerTest.kt
 package com.mobileapps.lesson2
 
 
+import com.mobileapps.CredentialsManager
 import org.junit.Test
 import org.junit.Assert.assertTrue
 import org.junit.Assert.assertFalse

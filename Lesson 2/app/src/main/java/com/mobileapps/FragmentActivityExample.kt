@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import com.mobileapps.lesson2.R
 import com.mobileapps.lesson2.databinding.ActivityFragmentBinding
 
-class FragmentActivityExample : AppCompatActivity() {
+open class FragmentActivityExample : AppCompatActivity() {
 
     lateinit var binding : ActivityFragmentBinding
 
@@ -15,9 +15,12 @@ class FragmentActivityExample : AppCompatActivity() {
         binding = ActivityFragmentBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
         if (savedInstanceState==null)
         {
             replaceFragment((FragmentA()))
+            binding.button.text = "Switch to Fragment B"
         }
 
         binding.button.setOnClickListener {
@@ -25,9 +28,12 @@ class FragmentActivityExample : AppCompatActivity() {
                 if (currentFragment is FragmentA)
                 {
                     replaceFragment(FragmentB())
+                    binding.button.text = "Switch to Fragment A"
+
                 } else
                 {
                     replaceFragment(FragmentA())
+                    binding.button.text = "Switch to Fragment B"
                 }
 
         }
