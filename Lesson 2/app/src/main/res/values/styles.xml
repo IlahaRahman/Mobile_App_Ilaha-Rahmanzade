@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Example of custom style for a button -->
+    <style name="CustomButtonStyle">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <!-- Example of custom style for a text field -->
+    <style name="CustomTextInputStyle">
+        <item name="android:textColorHint">?attr/colorOnSecondary</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+</resources>
